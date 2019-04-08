@@ -1,0 +1,359 @@
+//Colors
+
+$primary-color:hsl(322, 100%, 66%);
+$pale-cyan: hsl(193, 100%, 96%);
+$dark-cyan: hsl(192, 100%, 9%);
+$grayish-blue: hsl(208, 11%, 55%);
+
+
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Poppins', sans-serif;
+    color: $dark-cyan;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+
+//Components
+
+
+//Buttons
+
+.btn {
+    display: inline-block;
+    border: none;
+    box-shadow: 0 1px 7px 1px rgba(0, 0, 0, .2);
+    border-radius: 200px;
+
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.btn-white {
+    background-color: #fff;
+    color: $dark-cyan;
+    font-weight: 700;
+}
+
+.btn-pink {
+    background-color: $primary-color;
+    color: #fff;
+    font-weight: 700;
+}
+
+.cta1 {
+    padding: .6rem 2rem;
+    font-size: .8rem;
+}
+
+.cta2 {
+    padding: .9rem 3.5rem;
+    font-size: .8rem;
+    display: block;
+    margin: 0 auto;
+    @media screen and (min-width:'768px'){
+        margin: 0;
+    }
+}
+
+
+//card
+.card {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 9px 2px #0002;
+    margin-bottom: 2rem;
+
+    img {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        @media screen and (min-width:'768px'){
+            width: 70%;
+        }
+    }
+
+    h3 {
+        margin-bottom: 1.5rem;
+        @media screen and (min-width:'768px'){
+            text-align: left;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 1rem;
+        color: $grayish-blue;
+        @media screen and (min-width:'768px'){
+            text-align: left;
+        }
+
+    }
+
+    @media screen and (min-width:'768px'){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 6rem;
+        &:nth-child(1){
+            flex-direction: row-reverse
+        }
+        &:nth-child(3){
+            flex-direction: row-reverse
+        }
+    }
+
+    
+}
+
+
+//Headings
+
+
+.heading-1 {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    text-align: center;
+    @media screen and (min-width:'768px'){
+        text-align: left;
+    }
+}
+
+.heading-2 {
+    font-size: 1.4rem !important;
+    margin: 1.3rem 0;
+}
+
+
+
+//helpers
+
+.mt-large {
+    margin-top: 3.5rem !important;
+}
+
+.mb-regular {
+    margin-bottom: 2rem !important;
+}
+
+
+
+//Header Section
+
+#header {
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $pale-cyan;
+
+    @media screen and (min-width:'768px'){
+        background-image: url(../images/bg-hero-desktop.svg);
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+        margin-bottom: 3rem;
+        @media screen and (min-width:'768px'){
+            margin-bottom: 0;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+    }
+
+    .content {
+        width: 80%;
+        margin: 0 auto;
+
+        p {
+            text-align: center;
+            @media screen and (min-width:'768px'){
+                text-align: left;
+                font-size: 16px;
+            }
+        }
+
+        img {
+            margin-top: 3rem;
+            @media screen and (min-width:'768px'){
+                margin-left: 1rem;
+            }
+        }
+
+        .btn {
+            margin-bottom: 3rem !important;
+        }
+
+        @media screen and (min-width:'768px'){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            height: 100vh;
+
+            img{
+                width: 50%;
+                margin-top: 0   ;
+            }
+        }
+    }
+}
+
+
+
+//features section
+
+#features {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: block;
+
+}
+
+#cta {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    .card {
+        padding: 1.7rem 0;
+        width: 80%;
+        margin: 0 auto;
+        @media screen and (min-width:'768px'){
+            width: 50%;
+        }
+
+                
+
+        h4 {
+            margin-bottom: 1.6rem;
+        }
+
+        @media screen and (min-width:'768px'){
+            flex-direction: column;
+        }
+    }
+}
+
+
+
+#footer {
+    background-color: $dark-cyan;
+    padding: 1rem;
+    color: $pale-cyan;
+    text-align: left;
+    z-index: 0;
+
+
+    .content {
+        padding: 8rem;
+        font-size: 16px;
+        @media screen and (min-width:'768px'){
+            width: 80%;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 1.3rem;
+        }
+
+
+        .email,
+        .location,
+        .phone {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: .7rem;
+
+            img {
+                padding: 1rem;
+                width: 20px;
+            }
+        }
+
+        .location img {
+            width: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $pale-cyan;
+
+        }
+
+        @media screen and (min-width:'768px'){
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+
+    .links{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        a{
+            padding: .5rem 0;
+        }
+        .link{
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width:'768px'){
+               padding: 0rem 3rem;
+            }
+        }
+        @media screen and (min-width:'768px'){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .social{
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+
+        a{
+            margin-left: .5rem;
+        }
+    }
+
+    .copy-text{
+        font-size: 14px;
+        text-align: center;
+    }
+}
